@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UPI Payment Interface</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="upi-container">
+    <h1>UPI Payment Interface</h1>
+    <form id="upiForm" onsubmit="return generateUpiLink();">
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <input type="text" id="upiId" placeholder="Enter your UPI ID (e.g., name@bank)" required />
+      <input type="number" id="amount" placeholder="Enter amount (INR)" min="1" required />
+      <button type="submit">Pay</button>
+    </form>
+    <div id="result" class="hidden">
+      <a href="#" id="upiLink" target="_blank"></a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
